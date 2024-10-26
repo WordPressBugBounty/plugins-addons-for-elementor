@@ -7,7 +7,7 @@ Tags: elementor, elementor addons, elementor extensions, elementor widgets, page
 Requires at least: 5.8
 Tested up to: 6.6
 Requires PHP: 5.8
-Stable Tag: 8.5.1
+Stable Tag: 8.6
 License: GPLv3
 License URI: https://opensource.org/licenses/GPL-3.0
 
@@ -214,6 +214,9 @@ Email us at support[at]livemeshthemes.com and we will be happy to assist you.
 == Changelog ==
 
 
+
+= 8.6 =
+* Freemius SDK update to 2.8.1
 
 = 8.5.1 =
 * Added - Enhanced validation of the parameters for the piecharts.
