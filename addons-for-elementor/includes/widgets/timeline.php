@@ -87,6 +87,14 @@ class LAE_Timeline_Widget extends LAE_Widget_Base {
     }
 
     /**
+     * Cache the output for the widget
+     * @return bool
+     */
+    protected function is_dynamic_content(): bool {
+        return false;
+    }
+
+    /**
      * Register the controls for the widget
      * Adds fields that help configure and customize the widget
      * @return void
