@@ -1,4 +1,4 @@
-=== Elementor Addons by Livemesh ===
+=== Livemesh Addons by Elementor ===
 Author URI: https://livemeshelementor.com
 Plugin URI: https://livemeshelementor.com
 Donate link: https://livemeshelementor.com/
@@ -7,11 +7,11 @@ Tags: elementor, elementor addons, elementor extensions, elementor widgets, page
 Requires at least: 5.8
 Tested up to: 6.8
 Requires PHP: 5.8
-Stable Tag: 8.8
+Stable Tag: 9.0
 License: GPLv3
 License URI: https://opensource.org/licenses/GPL-3.0
 
-Elementor Addons saves time with multiple ready-to-use drag and drop styles for 30+ essential widgets built for Elementor page builder.
+Elementor Addons that saves time with multiple ready-to-use drag and drop styles for 30+ essential widgets built for Elementor page builder.
 
 == Description ==
 
@@ -205,15 +205,22 @@ Since the plugin is hosted on wordpress.org, it is available on wordpress.com as
 Email us at support[at]livemeshthemes.com and we will be happy to assist you.
 
 == Screenshots ==
-1. Live Demo of Elementor Addons
+1. Live Demo of Livemesh Elementor Addons
 2. Livemesh Addons for Elementor appearing in the sidebar window of the page builder.
 3. Editing a module or addon in the Elementor.
-4. The Elementor Addons plugin options window.
+4. The Livemesh Elementor Addons plugin options window.
 5. The Livemesh Addons for Elementor plugin documentation.
 
 == Changelog ==
 
 
+
+= 9.0 =
+* Removed translation related warnings in WP 6.8.3
+* Updated banners and icons
+
+= 8.9 =
+* Freemius SDK update to 2.12.2
 
 = 8.8 =
 * Updated - Freemius SDK to 2.11.0

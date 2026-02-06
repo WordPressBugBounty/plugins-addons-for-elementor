@@ -40,7 +40,7 @@ if ( !class_exists( 'Livemesh_Elementor_Addons' ) ) {
          */
         public function __clone() {
             // Cloning instances of the class is forbidden
-            _doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'livemesh-el-addons' ), '8.8' );
+            _doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'livemesh-el-addons' ), '9.0' );
         }
 
         /**
@@ -49,7 +49,7 @@ if ( !class_exists( 'Livemesh_Elementor_Addons' ) ) {
          */
         public function __wakeup() {
             // Unserializing instances of the class is forbidden
-            _doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'livemesh-el-addons' ), '8.8' );
+            _doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'livemesh-el-addons' ), '9.0' );
         }
 
         private function setup_debug_constants() {
@@ -100,6 +100,10 @@ if ( !class_exists( 'Livemesh_Elementor_Addons' ) ) {
          * them to allow the plugin to be localised
          */
         public function load_plugin_textdomain() {
+            // If textdomain already loaded, bail early
+            if ( isset( $GLOBALS['l10n']['livemesh-el-addons'] ) ) {
+                return;
+            }
             $lang_dir = apply_filters( 'lae_el_addons_lang_dir', trailingslashit( LAE_PLUGIN_DIR . 'languages' ) );
             // Traditional WordPress plugin locale filter
             $locale = apply_filters( 'plugin_locale', get_locale(), 'livemesh-el-addons' );
@@ -120,8 +124,8 @@ if ( !class_exists( 'Livemesh_Elementor_Addons' ) ) {
          * Setup the default hooks and actions
          */
         private function hooks() {
-            add_action( 'plugins_loaded', array($this, 'load_plugin_textdomain') );
             add_action( 'plugins_loaded', array($this, 'enhancement_hooks') );
+            add_action( 'init', array($this, 'load_plugin_textdomain') );
         }
 
         function exclude_images_with_specific_class( $classes ) {
